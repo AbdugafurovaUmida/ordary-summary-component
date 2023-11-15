@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 10px;
+    color: $color-primary;
+    @extend %font-prim;
+}
+
+.card-wrapper{
+    // background-color: #19A1AE;
+    background-image: $background-image;
+    min-height: 100vh;
+}
+
+.card{
+    width: 350px;
+    margin: 173px auto 0;
+    border-radius: 15px;
+    box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.50);
+&__top{
+    padding-top: 140px;
+    background: $background-image-secondary;
+    background-color: $background-color-secondary;
+    border-radius: 15px 15px 0px 0px;
+}
+&__bottom{
+    border-top: 1px solid $color-light;
+      @include display($justify: space-evenly, $direction:row);
+    padding: 24px 0 27px;
+}
+}
+
+.user{
+    @include display($direction: column);
+    margin-top: -48px;
+    margin-bottom: 28px;
+    &__content{
+        text-align: center;
+    }
+    &__image{
+        margin-bottom: 24px;
+    }
+    &__name{
+        @include font($size: 1.8rem, $height:normal, $weight: 700, $color: $color-primary);
+        margin-bottom: 13px;
+    }
+    &_age{
+        @include font($size: 1.8rem, $height:normal, $weight: 400);
+        margin-left: 8.5px;
+    }
+    &__city-name{
+        @include font($size: 1.4rem, $height:normal, $weight: 400);
+    }
+}
+
+.info{
+    text-align: center;
+    &__title{
+        @include font($size: 1.8rem, $height:normal, $weight: 700, $color: $color-primary); 
+        margin-bottom: 9px;
+    }
+    &__text{
+           @include font($size: 1rem, $height:normal, $weight: 400); 
+    }
+}
