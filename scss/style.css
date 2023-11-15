@@ -9,35 +9,75 @@ body {
   padding: 0;
 }
 
-body {
+:root {
   font-size: 10px;
+}
+
+body {
   color: #2E3349;
 }
 
-.card-wrapper {
-  background-image: linear-gradient(180deg, rgba(9, 137, 180, 0) 0.78%, #53FFEE 99.94%);
+.section {
+  width: 100%;
+  background-color: #19A1AE;
+  background-image: url("../../img/bg-svg-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+.inner-section {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-  width: 350px;
-  margin: 173px auto 0;
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   border-radius: 15px;
   box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.5);
 }
 .card__top {
-  padding-top: 140px;
-  background: #19A1AE;
+  height: 140px;
+  background-image: url("../../img/bg-pattern-card.svg");
   background-color: #41CBD3;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 15px 15px 0px 0px;
 }
+.card__main {
+  background-color: #fff;
+}
 .card__bottom {
+  background-color: #fff;
   border-top: 1px solid #E8E9EC;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  padding: 24px 0 27px;
+  gap: 40px;
+  padding: 24px 48px 28px;
+  border-radius: 0px 0px 15px 15px;
+  -webkit-border-radius: 0px 0px 15px 15px;
+  -moz-border-radius: 0px 0px 15px 15px;
+  -ms-border-radius: 0px 0px 15px 15px;
+  -o-border-radius: 0px 0px 15px 15px;
+}
+@media screen and (min-width: 768px) {
+  .card__bottom {
+    gap: 48px;
+  }
 }
 
 .user {
@@ -45,8 +85,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: -48px;
-  margin-bottom: 28px;
+  position: relative;
+  top: -48px;
 }
 .user__content {
   text-align: center;
